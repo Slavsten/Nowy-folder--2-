@@ -33,15 +33,14 @@ defineProps({
 }
 .image-container {
   display: flex;
-  align-items: center; /* Ustawienie obrazu i tekstu na środku w pionie */
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .text-container {
-  margin-left: 20%; /* Odległość między obrazem a tekstem */
+  margin-left: 20%;
 }
 
-/* Dodatkowe style dla nagłówka i tekstu, jeśli są wymagane */
 .text-container h2 {
   font-size: 18px;
   font-weight: bold;

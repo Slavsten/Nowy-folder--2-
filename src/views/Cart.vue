@@ -33,6 +33,4 @@ const removeFromCart = (item) => {
 };
 </script>
 
-<style scoped>
-/* ... (style) */
-</style>
+<style scoped></style>

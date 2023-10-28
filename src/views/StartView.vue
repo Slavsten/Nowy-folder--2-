@@ -92,7 +92,6 @@ function decreaseQuantity(item) {
     item.quantity--;
     cartTotal.value -= item.price;
   } else {
-    // Jeśli ilość wynosi 1 i użytkownik naciska "-", usuń przedmiot z koszyka
     removeFromCart(item);
   }
 }
@@ -104,6 +103,4 @@ function removeFromCart(item) {
 }
 </script>
 
-<style scoped>
-/* Tu możesz dodać style dla swojego komponentu, jeśli są potrzebne */
-</style>
+<style scoped></style>

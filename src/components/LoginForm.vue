@@ -29,18 +29,15 @@ export default {
   },
   methods: {
     login() {
-      // Wysyłanie żądania logowania do json-server
       axios
         .post("http://localhost:3000/login", {
           username: this.username,
           password: this.password,
         })
         .then((response) => {
-          // Obsługa poprawnej odpowiedzi - np. przekierowanie do panelu użytkownika
           console.log("Zalogowano pomyślnie:", response.data);
         })
         .catch((error) => {
-          // Obsługa błędów - np. wyświetlenie komunikatu o błędzie logowania
           console.error("Błąd logowania:", error);
         });
     },
@@ -49,7 +46,6 @@ export default {
 </script>
 
 <style scoped>
-/* Stylizacja formularza logowania */
 .form-container {
   max-width: 400px;
   margin: 0 auto;

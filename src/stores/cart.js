@@ -1,8 +1,8 @@
 import { reactive } from "vue";
 
 export const cart = reactive({
-  items: [], // Tablica przechowująca przedmioty w koszyku
-  total: 0, // Całkowita wartość koszyka
+  items: [],
+  total: 0,
 });
 
 export function addToCart(item) {

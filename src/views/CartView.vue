@@ -14,18 +14,15 @@
 
 <script setup>
 import { onMounted } from "vue";
-import { cart, removeFromCart as cartRemoveFromCart } from "@/stores/cart"; // Zmieniona nazwa funkcji
+import { cart, removeFromCart as cartRemoveFromCart } from "@/stores/cart";
 
 onMounted(() => {
-  // Wyświetlenie zawartości koszyka po załadowaniu komponentu
   console.log(cart.items);
 });
 
 function handleRemoveFromCart(item) {
-  cartRemoveFromCart(item); // Użyj zmienionej nazwy funkcji
+  cartRemoveFromCart(item);
 }
 </script>
 
-<style scoped>
-/* Tu możesz dodać style dla swojego komponentu, jeśli są potrzebne */
-</style>
+<style scoped></style>
