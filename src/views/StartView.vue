@@ -8,43 +8,36 @@ const data = ref([]);
 data.value = [
   {
     id: 1,
-    title: "Meduza",
-    price: "250zł/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
+    title: "APARAT NIKON",
+    price: "2500zł/doba",
+    img: "https://th.bing.com/th/id/R.602a52eb551a04f920023f6ff8eb58b0?rik=23HcK9W6WlopNQ&pid=ImgRaw&r=0",
   },
   {
     id: 2,
-    title: "Hilton",
-    price: "25000/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
+    title: "APARAT LUMIX",
+    price: "2500/doba",
+    img: "https://th.bing.com/th/id/OIP.IoJz4IsNPOvPT37-QBU7qwHaFw?w=246&h=191&c=7&r=0&o=5&pid=1.7",
   },
 
   {
     id: 3,
-    title: "Hilton",
-    price: "25000/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
+    title: "APARAT CANON",
+    price: "2500/doba",
+    img: "https://fotografiadlaciekawych.pl/wp-content/uploads/2019/08/uzywany-aparat-fotograficzny-eos7dmark2-190803_5889_1000px.jpg",
   },
 
   {
     id: 4,
-    title: "Hilton",
-    price: "25000/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
+    title: "APARAT MEDION",
+    price: "2500/doba",
+    img: "https://a.allegroimg.com/s1024/0ce913/de5df1dd4362922e189fe3dc71d7",
   },
 
   {
     id: 5,
-    title: "Hilton",
-    price: "25000/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
-  },
-
-  {
-    id: 6,
-    title: "Hilton",
-    price: "25000/doba",
-    img: "https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg",
+    title: "APARAT OLYMPUS",
+    price: "2500/doba",
+    img: "https://th.bing.com/th/id/OPE.orEeTsbJ90aDZw300C300?pid=21.1&w=160&h=150",
   },
 ];
 data.value.forEach((item) => {
@@ -60,41 +53,4 @@ data.value.forEach((item) => {
   </wrapper>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import Wrapper from "@/components/content/wrapper/Wrapper.vue";
-import Image from "@/components/content/homepage/Image.vue";
-
-const data = ref([
-  /* Twoje dane */
-]);
-
-data.value.forEach((item) => {
-  item.isDisplayed = false;
-});
-</script>
-
-<style scoped>
-/* Dodaj tutaj style z komponentu Image.vue */
-.image-container {
-  display: flex;
-  align-items: margin-left;
-  margin-bottom: 20px;
-}
-
-.text-container {
-  margin-left: 20px; /* Odległość między obrazem a tekstem */
-}
-
-/* Dodatkowe style dla nagłówka i tekstu, jeśli są wymagane */
-.text-container h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.text-container p {
-  font-size: 14px;
-  color: gray;
-}
-</style>
+<style scoped></style>

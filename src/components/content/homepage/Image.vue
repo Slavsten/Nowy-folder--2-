@@ -31,12 +31,34 @@ defineProps({
 .homepage-img {
   width: 10dvh;
 }
+.image-container {
+  display: flex;
+  align-items: center; /* Ustawienie obrazu i tekstu na środku w pionie */
+  margin-bottom: 20px;
+}
+
+.text-container {
+  margin-left: 20%; /* Odległość między obrazem a tekstem */
+}
+
+/* Dodatkowe style dla nagłówka i tekstu, jeśli są wymagane */
+.text-container h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.text-container p {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}
 
 img {
   width: 16vh;
   height: auto;
   border-radius: 5%;
   border-style: solid;
+  border-color: black;
 }
 
 span {
