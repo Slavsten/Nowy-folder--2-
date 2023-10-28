@@ -1,8 +1,26 @@
+<template>
+  <Wrapper>
+    <div class="image-container" v-for="(item, index) in data" :key="index">
+      <Image :img-link="item.img" :title="item.title" :price="item.price" />
+      <button @click="addToCart(item)" v-if="!item.inCart">
+        Dodaj do koszyka
+      </button>
+      <span v-else>
+        W koszyku:
+        <button @click="decreaseQuantity(item)" v-if="item.quantity > 1">
+          -
+        </button>
+        {{ item.quantity }} szt. za {{ item.price * item.quantity }} zł
+        <button @click="increaseQuantity(item)">+</button>
+      </span>
+    </div>
+  </Wrapper>
+</template>
+
 <script setup>
 import { ref } from "vue";
 import Wrapper from "@/components/content/wrapper/Wrapper.vue";
 import Image from "@/components/content/homepage/Image.vue";
-import Cart from "@/views/Cart.vue";
 
 const showCart = ref(false);
 const cartTotal = ref(0);
@@ -64,21 +82,28 @@ function addToCart(item) {
   }
   cartTotal.value += item.price;
 }
+function increaseQuantity(item) {
+  item.quantity++;
+  cartTotal.value += item.price;
+}
+
+function decreaseQuantity(item) {
+  if (item.quantity > 1) {
+    item.quantity--;
+    cartTotal.value -= item.price;
+  } else {
+    // Jeśli ilość wynosi 1 i użytkownik naciska "-", usuń przedmiot z koszyka
+    removeFromCart(item);
+  }
+}
+
+function removeFromCart(item) {
+  item.inCart = false;
+  cartTotal.value -= item.price * item.quantity;
+  item.quantity = 0;
+}
 </script>
 
-<template>
-  <Wrapper>
-    <div class="image-container" v-for="(item, index) in data" :key="index">
-      <Image :img-link="item.img" :title="item.title" :price="item.price" />
-      <button @click="addToCart(item)" v-if="!item.inCart">
-        Dodaj do koszyka
-      </button>
-      <span v-else>
-        W koszyku: {{ item.quantity }} szt. za
-        {{ item.price * item.quantity }} zł
-      </span>
-    </div>
-  </Wrapper>
-</template>
-
-<style scoped></style>
+<style scoped>
+/* Tu możesz dodać style dla swojego komponentu, jeśli są potrzebne */
+</style>
