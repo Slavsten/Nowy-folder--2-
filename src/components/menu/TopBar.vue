@@ -1,6 +1,3 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
 <template>
   <header>
     <div class="wrapper top-bar">
@@ -9,10 +6,17 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/about" class="nav-link">O nas</RouterLink>
         <RouterLink to="/contact" class="nav-link">Kontakt</RouterLink>
         <RouterLink to="/Cart" class="nav-link">Koszyk</RouterLink>
+        <router-link to="/login" class="nav-link">Logowanie</router-link>
+        <router-link to="/register" class="nav-link">Rejestracja</router-link>
       </nav>
     </div>
   </header>
 </template>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <style scoped>
 header {
   padding: 10px;

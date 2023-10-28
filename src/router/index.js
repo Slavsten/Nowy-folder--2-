@@ -3,6 +3,8 @@ import StartView from "../views/StartView.vue";
 import ContactView from "../views/ContactView.vue";
 import AboutView from "../views/AboutView.vue";
 import CartView from "../views/CartView.vue";
+import LoginForm from "../components/LoginForm.vue";
+import RegistrationForm from "../components/RegistrationForm.vue";
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: CartView,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: LoginForm,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: RegistrationForm,
   },
 ];
 
